@@ -26,23 +26,19 @@ class myMaths {
   }
 
   getAddition() {
-    console.log(`Результат сложения = ${this.num1 + this.num2}`);
+    return this.num1 + this.num2;
   }
 
   getDifference() {
-    console.log(
-      `Результат вычитания = ${
-        Math.max(this.num1, this.num2) - Math.min(this.num1, this.num2)
-      }`
-    );
+    return Math.max(this.num1, this.num2) - Math.min(this.num1, this.num2);
   }
 
   getMultiplication() {
-    console.log(`Результат умножения = ${this.num1 * this.num2}`);
+    return this.num1 * this.num2;
   }
 
   getDivision() {
-    console.log(`Результат деления = ${this.num1 / this.num2}`);
+    return this.num1 / this.num2;
   }
 }
 
@@ -51,3 +47,23 @@ myNums.getAddition();
 myNums.getDifference();
 myNums.getMultiplication();
 myNums.getDivision();
+
+// написал и подумал - что меньше кушает памяти, потому ниже задание в виде функций, без инициализации new instance
+
+function getAddition(num1, num2) {
+  console.log(`Результат сложения = ${num1 + num2}`);
+}
+
+function getDifference(num1, num2) {
+  console.log(
+    `Результат вычитания = ${Math.max(num1, num2) - Math.min(num1, num2)}`
+  );
+}
+
+function getMultiplication(num1, num2) {
+  console.log(`Результат умножения = ${num1 * num2}`);
+}
+
+function getDivision(num1, num2) {
+  console.log(`Результат деления = ${num1 / num2}`);
+}
