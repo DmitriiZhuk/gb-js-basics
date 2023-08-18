@@ -18,7 +18,8 @@ const randNum = (min = 0, max = 9) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const myArr = [...Array(5)].map(() => randNum());
+const myArr = [...Array(15)].map(() => randNum());
+// const myArr = [1, 2, 3, 4, 5, 6, 4, 3, 2, 1, 3];
 console.log(myArr);
 
 const arrSum = myArr.reduce((a, b) => a + b, 0);
@@ -28,9 +29,9 @@ const minValue = Math.min(...myArr);
 console.log(minValue);
 
 const arrWithIndexesOf3 = [];
-for (const elem of myArr) {
+for (const [index, elem] of myArr.entries()) {
   if (elem === 3) {
-    arrWithIndexesOf3.push(myArr.indexOf(elem));
+    arrWithIndexesOf3.push(index);
   }
 }
 console.log(arrWithIndexesOf3);
