@@ -43,27 +43,25 @@ class myMaths {
 }
 
 const myNums = new myMaths(12, 4);
-myNums.getAddition();
-myNums.getDifference();
-myNums.getMultiplication();
-myNums.getDivision();
+console.log(myNums.getAddition());
+console.log(myNums.getDifference());
+console.log(myNums.getMultiplication());
+console.log(myNums.getDivision());
 
 // написал и подумал - что меньше кушает памяти, потому ниже задание в виде функций, без инициализации new instance
 
 function getAddition(num1, num2) {
-  console.log(`Результат сложения = ${num1 + num2}`);
+  return num1 + num2;
 }
 
 function getDifference(num1, num2) {
-  console.log(
-    `Результат вычитания = ${Math.max(num1, num2) - Math.min(num1, num2)}`
-  );
+  return Math.max(num1, num2) - Math.min(num1, num2);
 }
 
 function getMultiplication(num1, num2) {
-  console.log(`Результат умножения = ${num1 * num2}`);
+  return num1 * num2;
 }
 
 function getDivision(num1, num2) {
-  console.log(`Результат деления = ${num1 / num2}`);
+  return num1 / num2;
 }
